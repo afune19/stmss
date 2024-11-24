@@ -1,0 +1,32 @@
+/* Floating Button */
+.floating-btn {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    right: 20px; /* Position on the right side */
+    transform: translateY(-50%); /* Adjust position to perfectly center vertically */
+    background-color: dodgerblue; /* Button background color */
+    color: white; /* Text color */
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 50px; /* Rounded edges */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Hover Effect */
+.floating-btn:hover {
+    background-color: #1e90ff; /* Slightly lighter DodgerBlue on hover */
+    transform: translateY(-50%) scale(1.1); /* Enlarge slightly while staying centered */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .floating-btn {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        right: 15px; /* Adjust position */
+    }
+}
