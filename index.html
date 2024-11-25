@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STMSO/R</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/menu.css"> 
+    <link rel="stylesheet" href="./css/main.css">   
+    <link rel="stylesheet" href="./css/contact.css"> 
+    <link rel="stylesheet" href="./css/hiring_advert.css"> 
+    <link rel="stylesheet" href="./css/admission_open.css"> 
+    <link rel="stylesheet" href="./css/adminstrators.css"> 
+    <script src="./javascript/script.js"></script>
+</head>
+<body>
+    
+<!-- Navbar Section -->
+<nav class="navbar navbar-inverse custom-navbar">
+  <div class="container-fluid">
+    <!-- Left Logo and School Name -->
+    <div class="navbar-header">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
+    <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
+        ST. MARY'S SCHOOL - ONGATA RONGAI
+      </h2>      
+
+  </div>
+      <!-- Collapsible toggle button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <!-- Centered Menu -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="./index.html">ST. MARY'S SCHOOL</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./history.html">Our School History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./pre-sch.html">Pre-School</a></li>
+            <li><a href="./primary.html">Primary</a></li>
+            <li><a href="./junior.html">Junior School</a></li>
+          </ul>
+        </li>
+        <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./liturgy.html">Liturgy Department</a></li>
+              <li><a href="#Non Academic Department">Guidance & Counselling</a></li>
+            </ul>
+          </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./adm_frm.html">Admission</a></li>
+            <li><a href="./staff.html">Staff</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent">Parent Portal</a></li>
+            <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student">Student Portal</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+<!-- Hero Section -->
+     <section class="hero">
+        <div class="hero-slides">
+            <div class="slide">
+                <img src="./images/hero/hero3.JPG" alt="School Image 1">
+            </div>
+            <div class="slide">
+                <img src="./images/hero/hero1.JPG" alt="School Image 2">
+            </div>
+            <div class="slide">
+                <img src="./images/hero/hero4.JPG" alt="School Image 3">
+            </div>
+            <div class="slide">
+                <img src="./images/hero/hero3.JPG" alt="School Image 3">
+            </div>
+            <div class="slide">
+                <img src="./images/hero/hero1.JPG" alt="School Image 3">
+            </div>
+            <div class="slide">
+                <img src="./images/hero/hero2.JPG" alt="School Image 3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+	
+<h2 style="font-family: 'Times New Roman', Times, serif; text-align: center; color: DodgerBlue;">WELCOME TO ST. MARY'S PRE-PRIMARY, PRIMARY & JUNIOR SCHOOL</h2>
+
+<!-- Section 1: About the School -->
+<section class="about">
+    <h2>ABOUT ST. MARY'S SCHOOL</h2>
+    <p>
+        Our Catholic school provides a nurturing environment for children to grow academically, spiritually, and socially. 
+        From preschool to junior school, we focus on instilling values of discipline, respect, and community service.
+    Our Catholic school provides a nurturing environment for children to grow academically, spiritually, and socially. From preschool to junior school, we focus on instilling 
+    values of discipline, respect, and community service.</p>
+</section>
+
+<section class="admin-card-section">
+    <!-- Admin Card 1 -->
+    <div class="admin-card admin-card-1" onclick="adminShowMessage
+    ('School Director: Our Catholic school provides a nurturing environment for children to grow academically, spiritually, and socially. From preschool to junior school, we focus on instilling values of discipline, respect, and community service.')">
+        <div class="admin-card-image">
+            <img src="./images/other_images/profile.png" alt="Person 1">
+        </div>
+        <div class="admin-card-content">
+            <h3>School Director</h3>
+            <p>Click to read School Director's message.</p>
+        </div>
+    </div>
+
+    <!-- Admin Card 2 -->
+    <div class="admin-card admin-card-2" onclick="adminShowMessage
+    ('Our Catholic school provides a nurturing environment for children to grow academically, spiritually, and socially. From preschool to junior school, we focus on instilling values of discipline, respect, and community service.')">
+        <div class="admin-card-image">
+            <img src="./images/other_images/woman.png" alt="Person 2">
+        </div>
+        <div class="admin-card-content">
+            <h3>Headteacher's Message</h3>
+            <p>Click to read Headteacher's Message.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Popup Section -->
+<div id="admin-popup" class="admin-popup">
+    <div class="admin-popup-content">
+        <span class="admin-close-icon" onclick="adminClosePopup()">X</span>
+        <p id="admin-popup-message"></p>
+    </div>
+</div>
+
+<script>
+    // Show popup with message
+    function adminShowMessage(message) {
+        const popup = document.getElementById('admin-popup');
+        const popupMessage = document.getElementById('admin-popup-message');
+        popupMessage.textContent = message;
+        popup.style.display = 'flex';
+    }
+
+    // Close popup
+    function adminClosePopup() {
+        const popup = document.getElementById('admin-popup');
+        popup.style.display = 'none';
+    }
+</script>
+
+<!-- Section 2: School Levels -->
+<section class="school-levels">
+<h2 style="font-size: 4rem; font-family: 'Times New Roman', Times, serif; text-align: center;">Our Schools</h2>
+<div class="level-container">
+    <!-- Pre-School -->
+    <div class="level-card preschool">
+        <a href="./pre-sch.html">
+            <img src="images/school level/presch.JPG" alt="Pre-School" class="level-img">
+            <h3>Pre-School</h3>
+            <p>Providing a safe and fun environment for early learning and growth.</p>
+        </a>
+    </div>
+    <!-- Lower Primary -->
+    <div class="level-card upper-primary">
+        <a href="./primary.html">
+            <img src="images/school level/prim.JPG" alt="Upper Primary" class="level-img">
+            <h3>Lower Primary</h3>
+            <p>Encouraging academic excellence and personal development.</p>
+        </a>
+    </div>
+    <!-- Upper Primary -->
+    <div class="level-card upper-primary">
+        <a href="./primary.html">
+            <img src="images/school level/prim.JPG" alt="Upper Primary" class="level-img">
+            <h3>Upper Primary</h3>
+            <p>Encouraging academic excellence and personal development.</p>
+        </a>
+    </div>
+    <!-- Junior School -->
+    <div class="level-card junior-school">
+        <a href="./junior.html">
+            <img src="images/school level/junior.JPG" alt="Junior School" class="level-img">
+            <h3>Junior School</h3>
+            <p>Preparing students for leadership and success in secondary education.</p>
+        </a>
+    </div>
+</div>
+</section>
+
+<!-- Admissions Now Open! -->
+<div class="floating-card1" id="applyCard" onclick="redirectToApplication()">
+    <h2>Admissions Now Open!</h2>
+    <p>Click here to apply for the new academic year.</p>
+</div>
+
+<!-- JavaScript for Redirect -->
+<script>
+    // Function to handle the redirect
+    function redirectToApplication() {
+        window.location.href = './adm_frm.html'; // Replace with your application page URL
+    }
+</script>
+
+<!-- Section 3: Catholic School Experience -->
+<section class="catholic-experience">
+<h2>The Saint's Experience</h2>
+<p>
+    At our Catholic school, faith and learning go hand-in-hand. Our students grow spiritually through prayer, reflection, and participation in the sacraments, creating a strong foundation for lifelong faith and service.
+</p>
+
+<div class="experience-container">
+    <div class="experience-card">
+        <img src="images/cathschexp/exp1.JPG" alt="Daily Prayer" class="experience-img">
+        <h3>Daily Prayer</h3>
+        <p>Students begin their day with prayer, fostering a connection with God.</p>
+    </div>
+    <div class="experience-card">
+        <img src="images/cathschexp/exp3.JPG" alt="Community Service" class="experience-img">
+        <h3>Community Service</h3>
+        <p>Engaging in service activities helps students embody the teachings of Christ.</p>
+    </div>
+    <div class="experience-card">
+        <img src="images/cathschexp/exp2.JPG" alt="School Liturgy" class="experience-img">
+        <h3>School Liturgy</h3>
+        <p>Frequent liturgical celebrations unite students and staff in faith and worship.</p>
+    </div>
+</div>
+</section>
+
+<!-- Hiring Popup 
+<div class="popup-overlay" id="jobPopup">
+    <div class="popup-card">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <h2>We are Now Hiring!</h2>
+        <p>Click to Apply.</p>
+        <a href="./job_ap.html" class="apply-btn">Apply Now</a>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle the popup behavior
+    const popup = document.getElementById('jobPopup');
+    const closeBtn = document.getElementById('closePopup');
+
+    // Show the popup when the page loads
+    window.onload = () => {
+        popup.style.display = 'flex';
+    };
+
+    // Close the popup when the close button is clicked
+    closeBtn.onclick = () => {
+        popup.style.display = 'none';
+    };
+</script>
+     End of Hiring Popup -->
+
+
+    <!-- Floating Bouncing Card -->
+    
+<!-- Footer -->
+
+<!-- WhatsApp Pop Overlay -->
+<div class="whatsapp-overlay" id="whatsappOverlay">
+    <a href="https://wa.me/254112706628?text=Hello%20St.%20Mary's%20School!" target="_blank">
+        <img src="images/logo/whatsapp.png" alt="WhatsApp Chat" class="whatsapp-icon">
+    </a>
+</div>
+
+     <!-- Contact Us Button -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- Popup Overlay (Initially Hidden) -->
+<div id="contact-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <h2 style="color: black; font-size: 25px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            St. Mary’s School <br /> Empowering the leaders of tomorrow.
+        </h2>
+        <p style="color: black; font-family: 'Times New Roman', Times, serif; font-size: 15px;">
+            Please fill in the below enquiry form and we shall reach out to you within 48 hrs.
+        </p>
+         
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbxDtB-u0z8g0y52dYNdib7Ec0KGhNOj83i6fTf5I5S_UEmXKrh6qgX5pmdcqkIMvWkT/exec" name="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<script src="./javascript/google_appscript.js"></script>
+
+<!-- JavaScript to Handle Popup -->
+<script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("contact-popup").style.display = "block"; // Show the popup when button is clicked
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("contact-popup").style.display = "none"; // Hide the popup when close button is clicked
+    }
+</script>
+
+     <footer class="school-footer">
+         <div class="footer-content">
+             <h2>Contact Us</h2>
+             <p>Address: 123 Catholic School Lane, Nairobi, Kenya</p>
+             <p>Email: <a href="mailto:info@catholicschool.ac.ke" class="footer-link">info@catholicschool.ac.ke</a></p>
+             <p>Phone: <a href="tel:+254700123456" class="footer-link">+254 700 123 456</a></p>
+             <div class="footer-socials">
+                 <a href="https://facebook.com" class="social-link">Facebook</a>
+                 <a href="https://twitter.com" class="social-link">Twitter</a>
+                 <a href="https://instagram.com" class="social-link">Instagram</a>
+             </div>
+         </div>
+         <div class="footer-note">
+             <p>&copy; 2024 Catholic School - All Rights Reserved.</p>
+         </div>
+     </footer>
+     
+</body>
+</html>
