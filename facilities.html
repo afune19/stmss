@@ -217,185 +217,135 @@
     <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </section>
 
-    <h1>Hire Our School Facilities</h1>
-    <div class="container">
-        <!-- Note Section -->
-        <div class="note">
-            <p><strong>Important Note:</strong> All school facilities are available during school holidays and weekends. Drivers will be provided for all vehicles.</p>
-        </div>
-
-        <!-- Facilities Section -->
-        <div class="cards-container">
-            <!-- School Hall -->
-            <div class="facility-card" data-name="School Hall" data-price="10000">
-                <img src="https://via.placeholder.com/300x200?text=School+Hall" alt="School Hall">
-                <h3>School Hall</h3>
-                <p>In-house fixed public address system</p>
-            </div>
-            <!-- School Field -->
-            <div class="facility-card" data-name="School Field" data-price="8000">
-                <img src="https://via.placeholder.com/300x200?text=School+Field" alt="School Field">
-                <h3>School Field</h3>
-                <p>Perfect for sports and events</p>
-            </div>
-            <!-- Bus 1 -->
-            <div class="facility-card" data-name="Bus 1" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=Bus+1" alt="Bus 1">
-                <h3>Bus 1</h3>
-                <p>50-seater, comfortable for trips</p>
-            </div>
-            <!-- Bus 2 -->
-            <div class="facility-card" data-name="Bus 2" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=Bus+2" alt="Bus 2">
-                <h3>Bus 2</h3>
-                <p>50-seater, comfortable for trips</p>
-            </div>
-            <!-- Bus 3 -->
-            <div class="facility-card" data-name="Bus 3" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=Bus+3" alt="Bus 3">
-                <h3>Bus 3</h3>
-                <p>50-seater, comfortable for trips</p>
-            </div>
-            <!-- Bus 4 -->
-            <div class="facility-card" data-name="Bus 4" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=Bus+4" alt="Bus 4">
-                <h3>Bus 4</h3>
-                <p>50-seater, comfortable for trips</p>
-            </div>
-            <!-- Bus 5 -->
-            <div class="facility-card" data-name="Bus 5" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=Bus+5" alt="Bus 5">
-                <h3>Bus 5</h3>
-                <p>50-seater, comfortable for trips</p>
-            </div>
-            <!-- School Van -->
-            <div class="facility-card" data-name="School Van" data-vehicle="true">
-                <img src="https://via.placeholder.com/300x200?text=School+Van" alt="School Van">
-                <h3>School Van</h3>
-                <p>14-seater, suitable for small groups</p>
-            </div>
-        </div>
-
-        <!-- Request Form -->
-        <form id="hireForm">
-            <div class="form-group">
-                <label for="selectedFacility">Select Facility</label>
-                <select id="selectedFacility" name="selectedFacility" required>
-                    <option value="">-- Select a Facility --</option>
-                    <option value="School Hall" data-price="10000" data-vehicle="false">School Hall</option>
-                    <option value="School Field" data-price="8000" data-vehicle="false">School Field</option>
-                    <option value="Bus 1" data-vehicle="true">Bus 1</option>
-                    <option value="Bus 2" data-vehicle="true">Bus 2</option>
-                    <option value="Bus 3" data-vehicle="true">Bus 3</option>
-                    <option value="Bus 4" data-vehicle="true">Bus 4</option>
-                    <option value="Bus 5" data-vehicle="true">Bus 5</option>
-                    <option value="School Van" data-vehicle="true">School Van</option>
-                </select>
-            </div>
-
-            <div class="form-group" id="regionInput" style="display: none;">
-                <label for="region">Select Region (for transport)</label>
-                <select id="region" name="region">
-                    <option value="">-- Select Region --</option>
-                    <option value="Nairobi">Nairobi</option>
-                    <option value="Mombasa">Mombasa</option>
-                    <option value="Kisumu">Kisumu</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="totalPrice">Total Price (KES) per day</label>
-                <input type="number" id="totalPrice" name="totalPrice" readonly>
-            </div>
-
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" required>
-            </div>
-
-            <div class="form-group">
-                <button type="submit">Submit Request</button>
-            </div>
-        </form>
+<h1>Hire Our School Facilities</h1>
+<div class="container">
+    <!-- Note Section -->
+    <div class="note">
+        <p><strong>Important Note:</strong> All school facilities are available during school holidays and weekends. Drivers will be provided for all vehicles.</p>
     </div>
 
-    <script>
-        // Define the prices for each vehicle by region
-        const vehiclePrices = {
-            "Bus 1": {
-                "Nairobi": 15000,
-                "Mombasa": 18000,
-                "Kisumu": 16000
-            },
-            "Bus 2": {
-                "Nairobi": 16000,
-                "Mombasa": 19000,
-                "Kisumu": 17000
-            },
-            "Bus 3": {
-                "Nairobi": 17000,
-                "Mombasa": 20000,
-                "Kisumu": 18000
-            },
-            "Bus 4": {
-                "Nairobi": 17000,
-                "Mombasa": 20000,
-                "Kisumu": 18000
-            },
-            "Bus 5": {
-                "Nairobi": 18000,
-                "Mombasa": 21000,
-                "Kisumu": 19000
-            },
-            "School Van": {
-                "Nairobi": 8000,
-                "Mombasa": 9000,
-                "Kisumu": 8500
+    <!-- Facilities Section -->
+    <div class="cards-container">
+        <!-- Facility Cards -->
+        <div class="facility-card" data-name="School Hall" data-price="10000">
+            <img src="https://via.placeholder.com/300x200?text=School+Hall" alt="School Hall">
+            <h3>School Hall</h3>
+            <p>In-house fixed public address system</p>
+        </div>
+        <div class="facility-card" data-name="School Field" data-price="8000">
+            <img src="https://via.placeholder.com/300x200?text=School+Field" alt="School Field">
+            <h3>School Field</h3>
+            <p>Perfect for sports and events</p>
+        </div>
+        <div class="facility-card" data-name="Bus 1" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=Bus+1" alt="Bus 1">
+            <h3>Bus 1</h3>
+            <p>50-seater, comfortable for trips</p>
+        </div>
+        <div class="facility-card" data-name="Bus 2" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=Bus+2" alt="Bus 2">
+            <h3>Bus 2</h3>
+            <p>50-seater, comfortable for trips</p>
+        </div>
+        <div class="facility-card" data-name="Bus 3" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=Bus+3" alt="Bus 3">
+            <h3>Bus 3</h3>
+            <p>50-seater, comfortable for trips</p>
+        </div>
+        <div class="facility-card" data-name="Bus 4" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=Bus+4" alt="Bus 4">
+            <h3>Bus 4</h3>
+            <p>50-seater, comfortable for trips</p>
+        </div>
+        <div class="facility-card" data-name="Bus 5" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=Bus+5" alt="Bus 5">
+            <h3>Bus 5</h3>
+            <p>50-seater, comfortable for trips</p>
+        </div>
+        <div class="facility-card" data-name="School Van" data-vehicle="true">
+            <img src="https://via.placeholder.com/300x200?text=School+Van" alt="School Van">
+            <h3>School Van</h3>
+            <p>14-seater, suitable for small groups</p>
+        </div>
+    </div>
+
+    <!-- Facility Selection Form -->
+    <form id="facilityForm">
+        <div class="form-group">
+            <label for="selectedFacility">Select a Facility</label>
+            <select id="selectedFacility" name="selectedFacility" required>
+                <option value="">-- Select a Facility --</option>
+                <option value="School Hall" data-price="10000" data-vehicle="false">School Hall</option>
+                <option value="School Field" data-price="8000" data-vehicle="false">School Field</option>
+                <option value="Bus 1" data-vehicle="true">Bus 1</option>
+                <option value="Bus 2" data-vehicle="true">Bus 2</option>
+                <option value="Bus 3" data-vehicle="true">Bus 3</option>
+                <option value="Bus 4" data-vehicle="true">Bus 4</option>
+                <option value="Bus 5" data-vehicle="true">Bus 5</option>
+                <option value="School Van" data-vehicle="true">School Van</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="regionInput" style="display: none;">
+            <label for="region">Select Region (for transport)</label>
+            <select id="region" name="region">
+                <option value="">-- Select Region --</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Kisumu">Kisumu</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Show Total Cost</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const vehiclePrices = {
+        "Bus 1": { "Nairobi": 15000, "Mombasa": 18000, "Kisumu": 16000 },
+        "Bus 2": { "Nairobi": 16000, "Mombasa": 19000, "Kisumu": 17000 },
+        "Bus 3": { "Nairobi": 17000, "Mombasa": 20000, "Kisumu": 18000 },
+        "Bus 4": { "Nairobi": 17000, "Mombasa": 20000, "Kisumu": 18000 },
+        "Bus 5": { "Nairobi": 18000, "Mombasa": 21000, "Kisumu": 19000 },
+        "School Van": { "Nairobi": 8000, "Mombasa": 9000, "Kisumu": 8500 }
+    };
+
+    const facilitySelect = document.getElementById('selectedFacility');
+    const regionInput = document.getElementById('regionInput');
+    const regionSelect = document.getElementById('region');
+
+    facilitySelect.addEventListener('change', () => {
+        const selectedOption = facilitySelect.options[facilitySelect.selectedIndex];
+        const isVehicle = selectedOption.getAttribute('data-vehicle') === 'true';
+        regionInput.style.display = isVehicle ? 'block' : 'none';
+    });
+
+    document.getElementById('facilityForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const selectedOption = facilitySelect.options[facilitySelect.selectedIndex];
+        const facilityName = selectedOption.value;
+        const isVehicle = selectedOption.getAttribute('data-vehicle') === 'true';
+        let totalCost;
+
+        if (isVehicle) {
+            const region = regionSelect.value;
+            if (!region) {
+                alert('Please select a region for transport vehicles.');
+                return;
             }
-        };
+            totalCost = vehiclePrices[facilityName][region];
+        } else {
+            totalCost = selectedOption.getAttribute('data-price');
+        }
 
-        // Event listener for facility selection
-        document.getElementById('selectedFacility').addEventListener('change', function(event) {
-            const selectedOption = event.target.options[event.target.selectedIndex];
-            const price = selectedOption.getAttribute('data-price');
-            const isVehicle = selectedOption.getAttribute('data-vehicle') === 'true';
+        const contactMessage = `For more details or to book the ${facilityName}, please contact the school at +254 112 706 628.`;
+        alert(`The total cost for ${facilityName} is KES ${totalCost}.\n\n${contactMessage}`);
+    });
+</script>
 
-            // Set the total price
-            document.getElementById('totalPrice').value = price;
-
-            // Show region input if a vehicle is selected
-            if (isVehicle) {
-                document.getElementById('regionInput').style.display = 'block';
-            } else {
-                document.getElementById('regionInput').style.display = 'none';
-            }
-        });
-
-        // Event listener for region selection (if vehicle is selected)
-        document.getElementById('region').addEventListener('change', function(event) {
-            const selectedFacility = document.getElementById('selectedFacility').value;
-            const region = event.target.value;
-
-            // Get the price for the selected vehicle and region
-            const price = vehiclePrices[selectedFacility][region];
-            document.getElementById('totalPrice').value = price;
-        });
-
-        // Handle form submission
-        document.getElementById('hireForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const facility = document.getElementById('selectedFacility').value;
-
-            alert(`Request submitted for ${facility} by ${name}. Approval will be sent within 24 hours.`);
-        });
-    </script>
 
 <!-- Footer -->
 
