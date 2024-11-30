@@ -385,7 +385,7 @@ body {
 }
 
 .footer-link {
-    color: lightblue;
+    color: whitesmoke;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -466,6 +466,16 @@ body {
 .whatsapp-overlay {
     animation: bounce 2s infinite; /* Bouncing effect */
 }
+
+.email-link {
+    color: white; /* White text color for the link */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .email-link:hover {
+    color: black; /* Change color to dodgerblue on hover */
+    text-decoration: underline; /* Add underline on hover for better accessibility */
+  }
 
 
 
