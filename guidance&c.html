@@ -14,73 +14,78 @@
     <link rel="stylesheet" href="./css/contact.css">
     </head>
 <body>
-    <!-- Navbar Section -->
+    
+  <!-- Navbar Section -->
 <nav class="navbar navbar-inverse custom-navbar">
-    <div class="container-fluid">
-      <!-- Left Logo and School Name -->
-      <div class="navbar-header">
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
-      <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
-      <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
-          ST. MARY'S SCHOOL - ONGATA RONGAI
-        </h2>      
-  
+  <div class="container-fluid">
+    <!-- Left Logo and School Name -->
+    <div class="navbar-header">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+        <a href="index.html">
+            <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
+        </a>        
+        <a href="index.html" style="text-decoration: none;">
+            <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
+              ST. MARY'S SCHOOL - ONGATA RONGAI
+            </h2>
+          </a>             
+
+  </div>
+      <!-- Collapsible toggle button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
     </div>
-        <!-- Collapsible toggle button -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-      </div>
-      <!-- Centered Menu -->
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="./index.html">ST. MARY'S SCHOOL</a></li>
-          <li><a href="./index.html">Home</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+    <!-- Centered Menu -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./history.html">Our School History</a></li>
+            <li><a href="./adminstrators.html">Administrators</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./pre-sch.html">Pre-School</a></li>
+            <li><a href="./lower primary.html">Lower Primary</a></li>
+            <li><a href="./primary.html">Primary</a></li>
+            <li><a href="./junior.html">Junior School</a></li>
+          </ul>
+        </li>
+        <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
+        <li><a href="./student blog.html">Student Blog</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="./history.html">Our School History</a></li>
-              <li><a href="./adminstrators.html">Administrators</a></li>
+              <li><a href="./liturgy.html">Liturgy Department</a></li>
+              <li><a href="./guidance&c.html">Guidance & Counselling</a></li>            
+              <li><a href="./facilities.html">School Facilities</a></li>            
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="./pre-sch.html">Pre-School</a></li>
-              <li><a href="./lower primary.html">Lower Primary</a></li>
-              <li><a href="./primary.html">Primary</a></li>
-              <li><a href="./junior.html">Junior School</a></li>
-            </ul>
-          </li>
-          <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
-          <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="./liturgy.html">Liturgy Department</a></li>
-                <li><a href="./guidance&c.html">Guidance & Counselling</a></li>
-                <li><a href="./facilities.html">School Facilities</a></li>  
-              </ul>
-            </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="./adm_frm.html">Admission</a></li>
-              <li><a href="./staff.html">Staff</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent" target="_blank">Parent Portal</a></li>
-              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student" target="_blank">Student Portal</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./adm_frm.html">Admission</a></li>
+            <li><a href="./staff.html">Staff</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent" target="_blank">Parent Portal</a></li>
+            <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student" target="_blank">Student Portal</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   
   <section style="width: 100%; overflow: hidden; margin-bottom: 20px;">
     <div style="display: flex; justify-content: center; align-items: center; position: relative;">
