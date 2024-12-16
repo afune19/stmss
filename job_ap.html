@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="icon" href="./images/logo/primary logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: dodgerblue;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+        .submit-btn {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background-color: #1e90ff;
+        }
+        .checklist {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .checklist ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Job Application Form</h1>
+    <form action="confirmation.html" method="post" enctype="multipart/form-data">
+        <!-- Cover Letter -->
+        <label for="coverLetter">Cover Letter:</label>
+        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf, .doc, .docx" required>
+
+        <!-- Curriculum Vitae -->
+        <label for="cv">Curriculum Vitae (CV):</label>
+        <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+
+        <!-- Academic Certificates -->
+        <label for="certificates">Academic Certificates:</label>
+        <input type="file" id="certificates" name="certificates" multiple accept=".pdf, .jpg, .jpeg, .png" required>
+
+        <!-- Transcripts -->
+        <label for="transcripts">Transcripts:</label>
+        <input type="file" id="transcripts" name="transcripts" multiple accept=".pdf, .jpg, .jpeg, .png" required>
+
+        <!-- Professional Certifications -->
+        <label for="certifications">Professional Certifications:</label>
+        <input type="file" id="certifications" name="certifications" multiple accept=".pdf, .jpg, .jpeg, .png" required>
+
+        <!-- Identification Documents -->
+        <label for="idDocs">Identification Documents:</label>
+        <input type="file" id="idDocs" name="idDocs" accept=".pdf, .jpg, .jpeg, .png" required>
+
+        <!-- Recommendation Letters -->
+        <label for="recommendation">Recommendation Letters:</label>
+        <input type="file" id="recommendation" name="recommendation" multiple accept=".pdf, .doc, .docx, .jpg, .jpeg, .png" required>
+
+        <!-- Passport-Sized Photographs -->
+        <label for="photos">Passport-Sized Photographs:</label>
+        <input type="file" id="photos" name="photos" multiple accept=".jpg, .jpeg, .png" required>
+
+        <!-- Additional Supporting Documents -->
+        <label for="additionalDocs">Additional Supporting Documents:</label>
+        <input type="file" id="additionalDocs" name="additionalDocs" multiple accept=".pdf, .doc, .docx, .jpg, .jpeg, .png">
+
+        <div class="checklist">
+            <h3>Submission Checklist</h3>
+            <ul>
+                <li>Ensure all documents are in the correct format (PDF, JPG, DOC, etc.).</li>
+                <li>Ensure originals are available for verification during interviews.</li>
+                <li>Submit all required documents in certified copies if needed.</li>
+            </ul>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+</div>
+</body>
+</html>

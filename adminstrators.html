@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STMSO/R - School Administrator</title>
+    <link rel="icon" href="./images/logo/primary logo.png" type="image/png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="./css/main.css">   
+    <link rel="stylesheet" href="./css/contact.css"> 
+    <script src="./javascript/script.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+            color: dodgerblue;
+            margin-top: 20px;
+        }
+    
+        /* Hero Section Styling */
+        .hero-section {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
+    
+        .hero-section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7; /* Dim the background image for better text readability */
+        }
+    
+        .hero-section .hero-text {
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 6vw; /* Dynamically adjusts font size based on viewport width */
+            margin: 0;
+        }
+    
+        .hero-section p {
+            font-size: 2vw; /* Dynamically adjusts font size based on viewport width */
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+    
+        /* Section Styling */
+        .admin-section {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+            overflow: hidden;
+        }
+    
+        /* Alternate Sections */
+        .admin-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    
+        .admin-image {
+            flex: 1 1 300px;
+            height: 250px;
+            background-color: #e0f1ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    
+        .admin-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .admin-content {
+            flex: 2 1 500px;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .admin-content h2 {
+            color: dodgerblue;
+            font-size: 2rem;
+            margin: 0 0 10px;
+        }
+    
+        .admin-content p {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .admin-section {
+                flex-direction: column;
+                max-width: 100%;
+            }
+    
+            .admin-section:nth-child(even) {
+                flex-direction: column;
+            }
+    
+            .admin-content {
+                padding: 10px;
+            }
+    
+            .admin-image {
+                height: 200px;
+            }
+    
+            .hero-section {
+                height: auto;
+                padding: 20px 10px;
+            }
+    
+            .hero-section h1 {
+                font-size: 8vw; /* Adjust hero text for smaller screens */
+            }
+    
+            .hero-section p {
+                font-size: 3.8vw; /* Adjust hero paragraph text for smaller screens */
+            }
+    
+            .admin-content h2 {
+                font-size: 1.5rem;
+            }
+    
+            .admin-content p {
+                font-size: 1rem;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 15px;
+            }
+    
+            .hero-section h1 {
+                font-size: 8vw; /* Larger font for very small screens */
+            }
+    
+            .hero-section p {
+                font-size: 6vw; /* Adjust hero text for the smallest screens */
+            }
+    
+            .admin-content h2 {
+                font-size: 1.8rem;
+            }
+    
+            .admin-content p {
+                font-size: 1.3rem;
+            }
+        }
+    </style>   
+
+</head>
+<body>
+    
+<!-- Navbar Section -->
+<nav class="navbar navbar-inverse custom-navbar">
+    <div class="container-fluid">
+      <!-- Left Logo and School Name -->
+      <div class="navbar-header">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+          <a href="index.html">
+              <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
+          </a>        
+          <a href="index.html" style="text-decoration: none;">
+              <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
+                ST. MARY'S SCHOOL - ONGATA RONGAI
+              </h2>
+            </a>             
+  
+    </div>
+        <!-- Collapsible toggle button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <!-- Centered Menu -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./history.html">Our School History</a></li>
+              <li><a href="./adminstrators.html">Administrators</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="./pre-sch.html">Kindergarten</a></li>
+                <li><a href="./lower primary.html">Lower School</a></li>
+                <li><a href="./primary.html">Middle School</a></li>
+                <li><a href="./junior.html">Junior School</a></li>
+            </ul>
+          </li>
+          <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
+          <li><a href="./student blog.html">Student Blog</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./liturgy.html">Liturgy Department</a></li>
+                <li><a href="./guidance&c.html">Guidance & Counselling</a></li>            
+                <li><a href="./facilities.html">School Facilities</a></li>            
+              </ul>
+            </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./adm_frm.html">Admission</a></li>
+              <li><a href="./staff.html">Staff</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent" target="_blank">Parent Portal</a></li>
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student" target="_blank">Student Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <!-- Hero Section -->
+ <section class="hero-section">
+    <img src="./images/other images/flag.JPG" alt="School Background">
+    <div class="hero-text">
+        <h1>School Governing Council</h1>
+        <p>Welcome to the leadership hub of our school. Meet the dedicated team shaping the future of our learners.</p>
+    </div>
+</section>
+
+<!-- Board Chairman Section -->
+<section class="admin-section">
+    <div class="admin-image">
+        <img src="./images/other images/board-chairman.jpg" alt="Board Chairman">
+    </div>
+    <div class="admin-content">
+        <h2>Board Chairman's Message</h2>
+        <p> As the Chair of the School Board, I am proud to be part of an institution that is deeply committed to fostering 
+		academic excellence, personal growth, and community involvement. Our board’s mission is to support the school’s
+		vision by ensuring that it remains a place where every student is encouraged to explore their potential, 
+		achieve their goals, and become responsible global citizens. Together with the dedicated leadership team and 
+		staff, we work to create an environment where students thrive, parents are engaged, and the community plays an 
+		integral role in shaping the future of education. </p>
+    </div>
+</section>
+
+<!-- School Director Section -->
+<section class="admin-section">
+    <div class="admin-image">
+        <img src="./images/other images/school-director.jpg" alt="School Director">
+    </div>
+    <div class="admin-content">
+        <h2>School Director's Message</h2>
+        <p>I am honored to be part of an institution that prioritizes academic excellence, personal growth, and community
+		engagement. Our vision is to create a learning environment where every student is empowered to reach their 
+		full potential, both intellectually and socially. Through a combination of dedicated staff, innovative 
+		teaching methods, and strong partnerships with parents and the wider community, we are building a foundation
+		for success that will last a lifetime.</p>
+    </div>
+</section>
+
+<!-- Headteacher Section -->
+<section class="admin-section">
+    <div class="admin-image">
+        <img src="./images/other images/headteacher.jpg" alt="Headteacher">
+    </div>
+    <div class="admin-content">
+        <h2>Headteacher's Message</h2>
+        <p>It is both an honor and a privilege to lead an institution that is committed to providing a nurturing, inclusive,
+		and challenging environment for our students. We strive to instill a love for learning, strong moral values,
+		and the skills needed to succeed in life. Our dedicated team of staff works closely with parents, students,
+		and the community to ensure every child receives the best possible education. I am proud of the progress we 
+		continue to make, and together, we will continue to inspire, motivate, and guide our students toward a bright
+		and successful future.</p>
+    </div>
+</section>
+
+<!-- Deputy Headteacher Section -->
+<section class="admin-section">
+    <div class="admin-image">
+        <img src="./images/other images/deputy-headteacher.jpg" alt="Deputy Headteacher">
+    </div>
+    <div class="admin-content">
+        <h2>Deputy Headteacher's Message</h2>
+        <p>I am delighted to be part of a community that values excellence in both academic and personal development. Our 
+		school is dedicated to creating an inclusive and supportive environment where every student is encouraged 
+		to thrive and achieve their best. With a strong focus on fostering leadership, resilience, and a love for 
+		learning, we strive to equip our students with the skills they need to succeed in an ever-changing world. </p>
+    </div>
+</section>
+
+<!-- Senior Teacher Section -->
+<section class="admin-section">
+    <div class="admin-image">
+        <img src="./images/other images/headteacher.jpg" alt="Senior Teacher">
+    </div>
+    <div class="admin-content">
+        <h2>Senior Teacher's Message</h2>
+        <p>I am proud to be part of a dedicated team that focuses not only on academic excellence but also on developing
+		well-rounded individuals who are ready to face the challenges of tomorrow. Our school provides a nurturing 
+		environment where students are encouraged to explore their talents, build strong values, and develop critical
+		thinking skills. With a commitment to personalized learning and co-curricular activities, we strive to ensure
+		each child reaches their full potential.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+
+<!-- WhatsApp Pop Overlay -->
+<div class="whatsapp-overlay" id="whatsappOverlay">
+    <a href="https://wa.me/254704439383" target="_blank">
+        <img src="images/logo/whatsapp.png" alt="WhatsApp Chat" class="whatsapp-icon">
+    </a>
+</div>
+
+     <!-- Contact Us Button -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- Popup Overlay (Initially Hidden) -->
+<div id="contact-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <h2 style="color: black; font-size: 25px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            St. Mary’s School <br /> Empowering the leaders of tomorrow.
+        </h2>
+        <p style="color: black; font-family: 'Times New Roman', Times, serif; font-size: 15px;">
+            Please fill in the below enquiry form and we shall reach out to you within 48 hrs.
+        </p>
+         
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbxDtB-u0z8g0y52dYNdib7Ec0KGhNOj83i6fTf5I5S_UEmXKrh6qgX5pmdcqkIMvWkT/exec" name="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<script src="./javascript/google_appscript.js"></script>
+
+<!-- JavaScript to Handle Popup -->
+<script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("contact-popup").style.display = "block"; // Show the popup when button is clicked
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("contact-popup").style.display = "none"; // Hide the popup when close button is clicked
+    }
+</script>
+
+     <footer class="school-footer">
+         <div class="footer-content">
+             <h2>Contact Us</h2>
+             <p>Address: Off Gataka Road, St. Mary's Road, Ongata Rongai, Kajiado, Kenya</p>
+             <p>Email: <a href="mailto:stmarysprimary98@gmail.com" class="footer-link">stmarysprimary98@gmail.com</a></p>
+             <p>Phone: <a href="tel:+254112706628" class="footer-link">+254 112 706 628</a></p>
+             <div class="footer-socials">
+                 <a href="https://facebook.com" class="social-link">Facebook</a>
+                 <a href="https://twitter.com" class="social-link">Twitter</a>
+                 <a href="https://instagram.com" class="social-link">Instagram</a>
+             </div>
+         </div>
+         <div class="footer-note">
+            <p>Designed and developed by <a href="mailto:olufred19@gmail.com" class="email-link">FREDTECH SOLUTIONS</a></p>
+             <p>&copy; 2024 ST. Mary's School - Ongata Rongai - All Rights Reserved.</p>
+         </div>
+         
+     </footer>
+
+    </body>
+    </html>

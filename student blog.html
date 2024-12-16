@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STMSO/R - Student Blogs</title>
+    <link rel="icon" href="./images/logo/primary logo.png" type="image/png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="./css/main.css">   
+    <link rel="stylesheet" href="./css/contact.css"> 
+    <script src="./javascript/script.js"></script>
+    <style>
+                /* Hero Section */
+        .studblog-hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .studblog-hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .studblog-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+
+        .studblog-hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .studblog-hero-text h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .studblog-hero-text p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+
+        .studblog-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        /* Section Heading */
+        .studblog-header-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .studblog-header-section h1 {
+            color: dodgerblue;
+            margin: 0;
+        }
+
+        .studblog-header-section p {
+            color: #555;
+            margin: 5px 0 20px;
+        }
+
+        /* Blog Card */
+        .studblog-card {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .studblog-profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 20px;
+            object-fit: cover;
+        }
+
+        .studblog-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .studblog-content h2 {
+            color: dodgerblue;
+            margin: 0 0 5px;
+        }
+
+        .studblog-content p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .studblog-class {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar navbar-inverse custom-navbar">
+    <div class="container-fluid">
+      <!-- Left Logo and School Name -->
+      <div class="navbar-header">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+          <a href="index.html">
+              <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
+          </a>        
+          <a href="index.html" style="text-decoration: none;">
+              <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
+                ST. MARY'S SCHOOL - ONGATA RONGAI
+              </h2>
+            </a>             
+  
+    </div>
+        <!-- Collapsible toggle button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <!-- Centered Menu -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./history.html">Our School History</a></li>
+              <li><a href="./adminstrators.html">Administrators</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="./pre-sch.html">Kindergarten</a></li>
+                <li><a href="./lower primary.html">Lower School</a></li>
+                <li><a href="./primary.html">Middle School</a></li>
+                <li><a href="./junior.html">Junior School</a></li>
+            </ul>
+          </li>
+          <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
+          <li><a href="./student blog.html">Student Blog</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./liturgy.html">Liturgy Department</a></li>
+                <li><a href="./guidance&c.html">Guidance & Counselling</a></li>            
+                <li><a href="./facilities.html">School Facilities</a></li>            
+              </ul>
+            </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./adm_frm.html">Admission</a></li>
+              <li><a href="./staff.html">Staff</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent" target="_blank">Parent Portal</a></li>
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student" target="_blank">Student Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Hero Section -->
+    <div class="studblog-hero">
+        <img src="./images/other images/STMJSS.jpg" alt="Inspiring Student Blogs" />
+        <div class="studblog-hero-overlay"></div>
+        <div class="studblog-hero-text">
+            <h1>Welcome to Student Blogs</h1>
+            <p>Where creativity and learning meet</p>
+        </div>
+    </div>
+
+    <main class="studblog-container">
+        <!-- Section Heading -->
+        <div class="studblog-header-section">
+            <h1>Student Blogs</h1>
+            <p>Explore the creative minds of our students</p>
+        </div>
+
+        <!-- Blog 1 -->
+        <section class="studblog-card">
+            <img src="profile1.jpg" alt="Profile Picture of John Doe" class="studblog-profile-pic">
+            <div class="studblog-content">
+                <h2>John Doe</h2>
+                <p class="studblog-class">Class: 8A</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ligula id urna ullamcorper, non aliquet felis blandit.</p>
+            </div>
+        </section>
+
+        <!-- Blog 2 -->
+        <section class="studblog-card">
+            <img src="profile2.jpg" alt="Profile Picture of Jane Smith" class="studblog-profile-pic">
+            <div class="studblog-content">
+                <h2>Jane Smith</h2>
+                <p class="studblog-class">Class: 7B</p>
+                <p>Quisque euismod lacus in mi consequat, non hendrerit nulla aliquam. Etiam in risus urna. Nullam malesuada nec sapien eu convallis.</p>
+            </div>
+        </section>
+
+        <!-- Blog 3 -->
+        <section class="studblog-card">
+            <img src="profile3.jpg" alt="Profile Picture of Samuel Lee" class="studblog-profile-pic">
+            <div class="studblog-content">
+                <h2>Samuel Lee</h2>
+                <p class="studblog-class">Class: 6C</p>
+                <p>Fusce non tortor vitae felis aliquet malesuada. Aenean commodo, augue non fermentum facilisis, enim turpis mollis metus, non vestibulum orci lacus a lectus.</p>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+
+<!-- WhatsApp Pop Overlay -->
+<div class="whatsapp-overlay" id="whatsappOverlay">
+    <a href="https://wa.me/254704439383" target="_blank">
+        <img src="images/logo/whatsapp.png" alt="WhatsApp Chat" class="whatsapp-icon">
+    </a>
+</div>
+
+     <!-- Contact Us Button -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- Popup Overlay (Initially Hidden) -->
+<div id="contact-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <h2 style="font-size: 25px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            St. Mary’s School <br /> Empowering the leaders of tomorrow.
+        </h2>
+        <p style="font-family: 'Times New Roman', Times, serif; font-size: 15px;">
+            Please fill in the below enquiry form and we shall reach out to you within 48 hrs.
+        </p>
+         
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbxDtB-u0z8g0y52dYNdib7Ec0KGhNOj83i6fTf5I5S_UEmXKrh6qgX5pmdcqkIMvWkT/exec" name="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<script src="./javascript/google_appscript.js"></script>
+
+<!-- JavaScript to Handle Popup -->
+<script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("contact-popup").style.display = "block"; // Show the popup when button is clicked
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("contact-popup").style.display = "none"; // Hide the popup when close button is clicked
+    }
+</script>
+
+     <footer class="school-footer">
+         <div class="footer-content">
+             <h2>Contact Us</h2>
+             <p>Address: Off Gataka Road, St. Mary's Road, Ongata Rongai, Kajiado, Kenya</p>
+             <p>Email: <a href="mailto:stmarysprimary98@gmail.com" class="footer-link">stmarysprimary98@gmail.com</a></p>
+             <p>Phone: <a href="tel:+254112706628" class="footer-link">+254 112 706 628</a></p>
+             <div class="footer-socials">
+                 <a href="https://facebook.com" class="social-link">Facebook</a>
+                 <a href="https://twitter.com" class="social-link">Twitter</a>
+                 <a href="https://instagram.com" class="social-link">Instagram</a>
+             </div>
+         </div>
+         <div class="footer-note">
+            <p>Designed and developed by <a href="mailto:olufred19@gmail.com" class="email-link">FREDTECH SOLUTIONS</a></p>
+             <p>&copy; 2024 ST. Mary's School - Ongata Rongai - All Rights Reserved.</p>
+         </div>
+         
+     </footer>
+
+</body>
+</html>

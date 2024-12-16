@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STMSO/R - Admission</title>
+        <link rel="icon" href="./images/logo/primary logo.png" type="image/png">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/menu.css"> 
+        <link rel="stylesheet" href="./css/main.css">   
+        <link rel="stylesheet" href="./css/contact.css"> 
+        <link rel="stylesheet" href="./css/adm_frm.css"> 
+        <script src="./javascript/script.js"></script>
+    </head>
+    <body>
+        
+ <!-- Navbar Section -->
+<nav class="navbar navbar-inverse custom-navbar">
+    <div class="container-fluid">
+      <!-- Left Logo and School Name -->
+      <div class="navbar-header">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+          <a href="index.html">
+              <img src="./images/logo/primary logo.png" alt="Left Logo" style="width: 150px; height: 150px;">
+          </a>        
+          <a href="index.html" style="text-decoration: none;">
+              <h2 style="font-family: Arial, sans-serif; color: white; text-align: center; text-shadow: 0 0 10px #fff, 0 0 20px DodgerBlue; font-size: 3vw;">
+                ST. MARY'S SCHOOL - ONGATA RONGAI
+              </h2>
+            </a>             
+  
+    </div>
+        <!-- Collapsible toggle button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+      </div>
+      <!-- Centered Menu -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="./index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#about-us">About Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./history.html">Our School History</a></li>
+              <li><a href="./adminstrators.html">Administrators</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#our-school">Our Schools <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./pre-sch.html">Kindergarten</a></li>
+              <li><a href="./lower primary.html">Lower School</a></li>
+              <li><a href="./primary.html">Middle School</a></li>
+              <li><a href="./junior.html">Junior School</a></li>
+            </ul>
+          </li>
+          <li><a href="./Extra-curricular.html">Extra-Curricular</a></li>
+          <li><a href="./student blog.html">Student Blog</a></li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#Non Academic Department">Non Academic Department<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./liturgy.html">Liturgy Department</a></li>
+                <li><a href="./guidance&c.html">Guidance & Counselling</a></li>            
+                <li><a href="./facilities.html">School Facilities</a></li>            
+              </ul>
+            </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#join-us">Join Us <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./adm_frm.html">Admission</a></li>
+              <li><a href="./staff.html">Staff</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#portals">Portals <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=Parent" target="_blank">Parent Portal</a></li>
+              <li><a href="https://onlinesmis.com/index.php?id=kjd_stmps&portal=student" target="_blank">Student Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        
+   <!-- Hero Section -->
+   <section class="hero">
+    <div class="hero-slides">
+        <div class="slide">
+            <img src="./images/other images/hero.JPG" alt="School Image 1">
+        </div>
+        <div class="slide">
+            <img src="./images/other images/pground1.JPG" alt="School Image 2">
+        </div>
+        <div class="slide">
+            <img src="./images/other images/flag.JPG" alt="School Image 3">
+        </div>
+        <div class="slide">
+            <img src="./images/other images/pground2.JPG" alt="School Image 3">
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+    
+    <div class="form-container">
+        <h2>Request for Admission</h2>
+        <h3>Please fill in the below enquiry form and we shall reach out to you within 36 hours</h3>
+        <form id="admission-form" class="admission-form" method="post" action="https://script.google.com/macros/s/AKfycbxKsyLkFTYmhkd7BIpWOZfrheaHYDhSRo6Zyx6r4buhW7UadgVbyza82PtzngafW5ec/exec" name="admission-form" enctype="multipart/form-data">
+            <!-- Learner's Name -->
+            <div class="form-group">
+                <label for="learner-name">Learner's Name:</label>
+                <input type="text" id="learner-name" name="learner_name" required placeholder="Enter Learner's Name">
+            </div>
+        
+            <!-- Current Class -->
+            <div class="form-group">
+                <label for="current-class">Current Class:</label>
+                <select id="current-class" name="current_class" required onchange="updateSchoolAndFields()">
+                    <option value="" disabled selected>Select Current Class</option>
+                    <option value="play-group">Play Group</option>
+                    <option value="pre-primary-1">Pre-primary 1</option>
+                    <option value="pre-primary-2">Pre-primary 2</option>
+                    <option value="grade-1">Grade 1</option>
+                    <option value="grade-2">Grade 2</option>
+                    <option value="grade-3">Grade 3</option>
+                    <option value="grade-4">Grade 4</option>
+                    <option value="grade-5">Grade 5</option>
+                    <option value="grade-6">Grade 6</option>
+                    <option value="grade-7">Grade 7</option>
+                    <option value="grade-8">Grade 8</option>
+                    <option value="grade-9">Grade 9</option>
+                </select>
+            </div>
+        
+            <!-- Term to Join -->
+            <div class="form-group">
+                <label for="term-to-join">Term to Join:</label>
+                <select id="term-to-join" name="term_to_join" required onchange="updateTermSpecificFields()">
+                    <option value="" disabled selected>Select Term to Join</option>
+                    <option value="term-1">Term 1</option>
+                    <option value="term-2">Term 2</option>
+                    <option value="term-3">Term 3</option>
+                </select>
+            </div>
+        
+            <!-- Preferred School -->
+            <div class="form-group">
+                <label for="preferred-school">Preferred School:</label>
+                <input type="text" id="preferred-school" name="preferred_school" readonly placeholder="Preferred School will be auto-filled">
+            </div>
+        
+            <!-- NEMIS Number -->
+            <div class="form-group">
+                <label for="nemis-number">NEMIS Number:</label>
+                <input type="text" id="nemis-number" name="nemis_number" placeholder="Enter NEMIS Number">
+            </div>
+        
+            <!-- Assessment Number -->
+            <div class="form-group" id="assessment-number-group" style="display: none;">
+                <label for="assessment-number">Assessment Number:</label>
+                <input type="text" id="assessment-number" name="assessment_number" placeholder="Enter Assessment Number">
+            </div>
+        
+            <!-- Guardian's Name -->
+            <div class="form-group">
+                <label for="guardian-name">Guardian's Name:</label>
+                <input type="text" id="guardian-name" name="guardian_name" required placeholder="Enter Guardian's Name">
+            </div>
+        
+            <!-- Guardian's Phone Number -->
+            <div class="form-group">
+                <label for="guardian-phone">Guardian's Phone Number:</label>
+                <input type="tel" id="guardian-phone" name="guardian_phone" required placeholder="Enter Guardian's Phone Number">
+            </div>
+        
+            <!-- Guardian's Email -->
+            <div class="form-group">
+                <label for="guardian-email">Guardian's Email:</label>
+                <input type="email" id="guardian-email" name="guardian_email" required placeholder="Enter Guardian's Email">
+            </div>
+        
+            <!-- Checklist Section -->
+            <div class="form-group">
+                <h5>Please bring the following documents with you when visiting the school for admission.</h5>
+                <ul>
+                    <li>Carry a photocopy of the Birth Certificate or Birth Notification for all classes.</li>
+                    <li>For Junior School (Grades 7-9), carry a photocopy of the KPSEA Result Slip.</li>
+                </ul>
+            </div>
+        
+            <!-- Submit Button -->
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+        
+        <script>
+            // Function to handle current class change and preferred school logic
+            function updateSchoolAndFields() {
+                const currentClass = document.getElementById('current-class').value;
+                const preferredSchool = document.getElementById('preferred-school');
+                const assessmentGroup = document.getElementById('assessment-number-group');
+                const termToJoin = document.getElementById('term-to-join').value;
+        
+                let school = '';
+                assessmentGroup.style.display = 'none';
+        
+                // Determine the preferred school based on the current class
+                if (['play-group', 'pre-primary-1', 'pre-primary-2'].includes(currentClass)) {
+                    school = 'Kindergarten';
+                } else if (['grade-1', 'grade-2', 'grade-3'].includes(currentClass)) {
+                    school = 'Lower Primary';
+                } else if (['grade-4', 'grade-5', 'grade-6'].includes(currentClass)) {
+                    school = 'Upper Primary';
+                } else if (['grade-7', 'grade-8', 'grade-9'].includes(currentClass)) {
+                    school = 'Junior School';
+                }
+        
+                // Show Assessment Number for Grades 4-9
+                if (['grade-4', 'grade-5', 'grade-6', 'grade-7', 'grade-8', 'grade-9'].includes(currentClass)) {
+                    assessmentGroup.style.display = 'block';
+                }
+        
+                preferredSchool.value = school;
+            }
+        
+            // Function to handle term-specific logic
+            function updateTermSpecificFields() {
+                const termToJoin = document.getElementById('term-to-join').value;
+                const currentClass = document.getElementById('current-class').value;
+                const inputs = document.querySelectorAll('input, select');
+        
+                if ((currentClass === 'grade-6' || currentClass === 'grade-9') && termToJoin !== 'term-1') {
+                    inputs.forEach(input => input.disabled = true);
+                } else {
+                    inputs.forEach(input => input.disabled = false);
+                }
+        
+                updateSchoolAndFields();
+            };
+        </script>
+        <script src="./javascript/adm_app_google_appscript.js"></script>
+                     
+    <!-- Fees Structure Section -->
+<div class="fees-structure">
+    <h2>Fees Structure</h2>
+    <div class="card-container">
+        <!-- Card 1: Pre-primary School Fees -->
+        <div class="card">
+            <p class="card-description"><strong>Pre-primary School</strong> <br/>Download the fees structure for Pre-primary School students.</p>
+            <a href="fees-pre-primary.pdf" class="download-link" target="_blank">Download PDF</a>
+        </div>
+
+        <!-- Card 2: Lower Primary School Fees -->
+        <div class="card">
+            <p class="card-description"><strong>Lower Primary & upper-primary</strong> <br/>Download the fees structure for Lower Primary School & upper-primary students (Grades 1-6).</p>
+            <a href="fees-lower-primary.pdf" class="download-link" target="_blank">Download PDF</a>
+        </div>
+
+        <!-- Card 3: Junior Secondary School Fees -->
+        <div class="card">            
+            <p class="card-description"><strong>Junior Secondary</strong> <br/>Download the fees structure for Junior Secondary School students (Grades 7-9).</p>
+            <a href="fees-junior-secondary.pdf" class="download-link" target="_blank">Download PDF</a>
+        </div>
+    </div>
+</div>  
+
+<!-- Footer -->
+
+<!-- WhatsApp Pop Overlay -->
+<div class="whatsapp-overlay" id="whatsappOverlay">
+    <a href="https://wa.me/254704439383" target="_blank">
+        <img src="images/logo/whatsapp.png" alt="WhatsApp Chat" class="whatsapp-icon">
+    </a>
+</div>
+
+     <!-- Contact Us Button -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- Popup Overlay (Initially Hidden) -->
+<div id="contact-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">X</span>
+        <h2 style="color: black; font-size: 25px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+            St. Mary’s School <br /> Empowering the leaders of tomorrow.
+        </h2>
+        <p style="color: black; font-family: 'Times New Roman', Times, serif; font-size: 15px;">
+            Please fill in the below enquiry form and we shall reach out to you within 48 hrs.
+        </p>
+         
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbxDtB-u0z8g0y52dYNdib7Ec0KGhNOj83i6fTf5I5S_UEmXKrh6qgX5pmdcqkIMvWkT/exec" name="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<script src="./javascript/google_appscript.js"></script>
+
+<!-- JavaScript to Handle Popup -->
+<script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("contact-popup").style.display = "block"; // Show the popup when button is clicked
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("contact-popup").style.display = "none"; // Hide the popup when close button is clicked
+    }
+</script>
+
+     <footer class="school-footer">
+         <div class="footer-content">
+             <h2>Contact Us</h2>
+             <p>Address: Off Gataka Road, St. Mary's Road, Ongata Rongai, Kajiado, Kenya</p>
+             <p>Email: <a href="mailto:stmarysprimary98@gmail.com" class="footer-link">stmarysprimary98@gmail.com</a></p>
+             <p>Phone: <a href="tel:+254112706628" class="footer-link">+254 112 706 628</a></p>
+             <div class="footer-socials">
+                 <a href="https://facebook.com" class="social-link">Facebook</a>
+                 <a href="https://twitter.com" class="social-link">Twitter</a>
+                 <a href="https://instagram.com" class="social-link">Instagram</a>
+             </div>
+         </div>
+         <div class="footer-note">
+            <p>Designed and developed by <a href="mailto:olufred19@gmail.com" class="email-link">FREDTECH SOLUTIONS</a></p>
+             <p>&copy; 2024 ST. Mary's School - Ongata Rongai - All Rights Reserved.</p>
+         </div>
+
+</body>
+</html>

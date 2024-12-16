@@ -1,0 +1,73 @@
+/* Card Container Styling */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to a new line on smaller screens */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
+    padding: 20px; /* Adds padding around the container */
+}
+
+/* Card Styling */
+.floating-card1 {
+    background: linear-gradient(to bottom right, dodgerblue, maroon, white); /* Gradient background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    width: 100%;
+    max-width: 400px; /* Max width to prevent it from getting too large */
+    text-align: center;
+    cursor: pointer;
+    animation: bounce 1.5s infinite ease-in-out; /* Bouncing animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scale effect and box-shadow on hover */
+}
+
+/* Hover effect for scaling and 3D effect */
+.floating-card1:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow for 3D effect */
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Text Styling */
+.floating-card1 h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.floating-card1 p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8); /* Lightened text for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stacks cards vertically on smaller screens */
+        align-items: center; /* Centers the cards */
+    }
+
+    .floating-card1 {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+}
